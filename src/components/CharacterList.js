@@ -14,7 +14,13 @@ class CharacterList extends Component {
             this.props.characters.map(character => {
               return (
                 <li className="list-group-item" key={character.id} >
-                  <div className="list-item" >{character.name}</div>
+                  <div className="list-item" ><b>{character.name}</b></div>
+                  <i>
+                    <div>Strength: {character.strength}</div>
+                    <div>Intelligence: {character.intelligence}</div>
+                    <div>Speed: {character.speed}</div>
+                  </i>
+
                   <div className="list-item right-button"
                         onClick={ () => this.props.addCharacterById(character.id)} >
                     +

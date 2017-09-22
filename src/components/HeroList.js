@@ -14,8 +14,14 @@ class HeroList extends Component {
               return (
                 <li className="list-group-item" key={hero.id}>
                   <div className="list-item">
-                    { hero.name }
+                    <b>{ hero.name }</b>
                   </div>
+                  <i>
+                    <div>Strength: {hero.strength}</div>
+                    <div>Intelligence: {hero.intelligence}</div>
+                    <div>Speed: {hero.speed}</div>
+                  </i>
+
                   <div className="list-item right-button"
                         onClick={ () => this.props.removeCharacterById(hero.id)}>
                     x
