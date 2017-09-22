@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import CharacterList from './CharacterList';
 //import logo from './logo.svg';
 //import './App.css';
 
@@ -8,10 +8,10 @@ class App extends Component {
     return (
       <div >
         <h2>SuperSquad</h2>
-      
+        <CharacterList />
       </div>
     );
   }
 }
 
-export default connect(null, { })(App);
+export default App;
