@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { removeCharacterById } from '../actions';
-
+import { addCharacterById } from '../actions';
 
 class HeroList extends Component {
+  constructor(props) {
+    super(props);
+    //console.log('herolist props ', props);
+    this.props.addCharacterById(0);
+
+  }
+
   render() {
     return (
       <div>
@@ -38,9 +45,9 @@ class HeroList extends Component {
 
 function mapStateToProps(state) {
   return {
-    heroes: state.heroes
+    heroes: state.heroes,
   }
 }
 
 
-export default connect(mapStateToProps, { removeCharacterById })(HeroList);
+export default connect(mapStateToProps, { removeCharacterById, addCharacterById })(HeroList);
