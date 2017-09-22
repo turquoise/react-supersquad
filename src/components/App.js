@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import CharacterList from './CharacterList';
 //import logo from './logo.svg';
-//import './App.css';
+import '../styles/index.css';
 
 class App extends Component {
   render() {
     return (
-      <div >
+      <div className="App">
         <h2>SuperSquad</h2>
         <CharacterList />
       </div>
